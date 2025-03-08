@@ -1,0 +1,875 @@
+/*
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+@import url("font-awesome.min.css");
+@import url("//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900");
+@import url("//fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
+
+/* Basic */
+
+	body {
+		background: #222833;
+	}
+
+	body, input, select, textarea {
+		color: #555555;
+		font-family: 'Raleway', sans-serif;
+		font-size: 13pt;
+		font-weight: 300;
+		line-height: 1.75em;
+	}
+
+	a {
+		color: #7f682d;
+		text-decoration: underline;
+	}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p, ul, ol, dl, table, blockquote {
+		margin: 0 0 2em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: inherit;
+		font-weight: 700;
+		line-height: 1.75em;
+		margin-bottom: 1em;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	sub {
+		font-size: 0.8em;
+		position: relative;
+		top: 0.5em;
+	}
+
+	sup {
+		font-size: 0.8em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	hr {
+		border-top: solid 1px #888888;
+		border: 0;
+		margin-bottom: 1.5em;
+	}
+
+	blockquote {
+		border-left: solid 0.5em #888888;
+		font-style: italic;
+		padding: 1em 0 1em 2em;
+	}
+
+	section.special, article.special {
+		text-align: center;
+	}
+
+	header.major {
+		padding-bottom: 4em;
+	}
+
+	header h2 {
+		margin: 0;
+		padding: 0;
+		font-size: 3em;
+		font-weight: 600;
+	}
+
+	header .byline {
+		font-size: 1.6em;
+	}
+
+	p.byline-1 {
+		font-size: 1.4em;
+	}
+
+
+	footer > :last-child {
+		margin-bottom: 0;
+	}
+
+	footer.major {
+		padding-top: 3em;
+	}
+
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background: none;
+		border: solid 1px #888888;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0.75em;
+		text-decoration: none;
+		width: 100%;
+	}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		textarea:focus {
+			border-color: #3ac984;
+		}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: 1em;
+	}
+
+	::-webkit-input-placeholder {
+		color: inherit;
+		opacity: 0.5;
+		position: relative;
+		top: 3px;
+	}
+
+	:-moz-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	::-moz-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	:-ms-input-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	.formerize-placeholder {
+		color: rgba(85, 85, 85, 0.5) !important;
+		
+	}
+
+
+
+/* carousel */
+	.slick-slide {
+		display: inline-block; /* Asegura que los slides se alineen en fila */
+		text-align: center; /* Centra las imágenes */
+	}
+
+	.slick-slide img {
+		width: 100%; /* Asegura que las imágenes ocupen el espacio completo del slide */
+		max-width: none; /* Elimina la limitación de 300px si no es necesaria */
+		height: auto; /* Mantiene la proporción de las imágenes */
+		object-fit: cover; /* Recorta las imágenes si es necesario */
+	}
+
+	.slick-prev, .slick-next {
+		display: block !important;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1000;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(0, 0, 0, 0.5); /* Fondo circular */
+		border-radius: 50%;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	.slick-prev {
+		left: 10px; /* Ajusta según el diseño */
+	}
+	
+	.slick-next {
+		right: 10px; /* Ajusta según el diseño */
+	}
+	
+	.slick-prev:hover, .slick-next:hover {
+		background-color: rgba(0, 0, 0, 0.8); /* Cambia el fondo al pasar el mouse */
+	}
+
+	.slick-prev::before, .slick-next::before {
+		content: ''; /* Elimina el texto "Previous" y "Next" */
+		/* display: inline-block; Asegura que no se oculten las flechas */
+	}
+	
+	.slick-prev::after {
+		content: '\f104'; /* Código del ícono de flecha izquierda en Font Awesome */
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		color: white;
+		font-size: 20px;
+	}
+	
+	.slick-next::after {
+		content: '\f105'; /* Código del ícono de flecha derecha en Font Awesome */
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		color: white;
+		font-size: 20px;
+	}
+	
+
+/* Image */
+
+	.image {
+		border: 0;
+		position: relative;
+	}
+
+		.image.fit {
+			display: block;
+		}
+
+			.image.fit img {
+				display: block;
+				width: 100%;
+			}
+
+		.image.feature {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image.feature img {
+				display: block;
+				width: 100%;
+			}
+
+		.image.servicios {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image.servicios img {
+				display: block;
+				width: 100%;
+			}
+
+
+		.image.carousel {
+			position: relative;
+			width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+			overflow: hidden; /* Oculta contenido que sobresalga */
+		}
+			
+			
+			.image.carousel img {
+				display: block;
+				width: 100%; /* Asegura que las imágenes se adapten al contenedor */
+				max-width: 400px; /* Opcional: Ajusta el tamaño máximo de cada imagen */
+				height: auto; /* Mantiene la proporción de la imagen */
+				object-fit: cover; /* Recorta las imágenes si es necesario */
+			}
+			
+			
+
+/* Icon */
+
+	.icon {
+		position: relative;
+	}
+
+		.icon:before {
+			content: "";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+
+	.byline-1 i {
+		margin-right: 10px; /* Espacio entre el ícono y el texto */
+		color: #7f682d; /* Cambia al color que prefieras */
+		font-size: 1.2em; /* Tamaño del ícono */
+	}
+
+	.large-icon {
+		font-size: 12em;
+	}
+
+/* Lists */
+
+	ol.default {
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		ol.default li {
+			padding-left: 0.25em;
+		}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+		ul.default {
+			list-style: none;
+		}
+
+			ul.default li {
+				display: block;
+				padding: 0.60em 0;
+				border-top: 1px solid;
+				border-color: rgba(192, 192, 192, 0.15);
+			}
+
+			ul.default > :first-child {
+				padding-top: 0;
+				border-top: none;
+			}
+
+		ul.icons {
+			cursor: default;
+		}
+
+			ul.icons li {
+				display: inline-block;
+				line-height: 1em;
+				padding-left: 0.5em;
+			}
+
+				ul.icons li:first-child {
+					padding-left: 0;
+				}
+
+		ul.actions {
+			cursor: default;
+		}
+
+			ul.actions:last-child {
+				margin-bottom: 0;
+			}
+
+			ul.actions li {
+				display: inline-block;
+				padding: 0 0 0 1.5em;
+			}
+
+				ul.actions li:first-child {
+					padding: 0;
+				}
+
+			ul.actions.vertical li {
+				display: block;
+				padding: 1.5em 0 0 0;
+			}
+
+				ul.actions.vertical li:first-child {
+					padding: 0;
+				}
+
+		ul.contact li {
+			padding: 1.05em 0;
+			border-top: 1px solid;
+			border-color: rgba(192, 192, 192, 0.15);
+		}
+
+			ul.contact li > span {
+				display: inline-block;
+			}
+
+			ul.contact li .address, ul.contact li .mail, ul.contact li .phone, ul.contact li .hours  {
+				float: left;
+				width: 100px;
+				font-weight: 600;
+			}
+
+		ul.contact > :first-child {
+			padding-top: 0;
+			border-top: none;
+		}
+
+		ul.style li {
+			clear: both;
+			display: block;
+			padding-top: 3em;
+		}
+
+		ul.style > :first-child {
+			padding-top: 0;
+		}
+
+		ul.style h3 {
+			display: block;
+			margin: 0;
+			padding-bottom: 0.50em;
+			font-size: 1.1em;
+			font-weight: 700;
+			color: #404040;
+		}
+
+		ul.style .fa {
+			float: left;
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			margin-right: 1em;
+			background: #7f682d;
+			line-height: 80px;
+			text-align: center;
+			border-radius: 10px;
+			font-size: 2em;
+			color: white;
+		}
+
+		ul.list {
+			list-style: none;
+		}
+
+			ul.list li {
+				display: block;
+				padding: 0.60em 0;
+				border-top: 1px solid;
+				border-color: red;
+			}
+
+			ul.list > :first-child {
+				padding-top: 0;
+				border-top: none;
+			}
+
+		.contact li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+			
+		.contact li i {
+			font-size: 1.5em; /* Tamaño del ícono */
+			margin-right: 0.5em; /* Espaciado entre ícono y texto */
+			color: #277496; /* Color del ícono */
+		}
+		
+
+/* Tables */
+
+	table {
+		width: 100%;
+	}
+
+		table.default {
+			width: 100%;
+		}
+
+			table.default tbody tr {
+				border-bottom: solid 1px #888888;
+			}
+
+			table.default td {
+				padding: 0.5em 1em 0.5em 1em;
+			}
+
+			table.default th {
+				font-weight: 700;
+				padding: 0.5em 1em 0.5em 1em;
+				text-align: left;
+			}
+
+			table.default thead {
+				background: #555555;
+				color: #fff;
+			}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+		background: #aa8b3e;
+		border-radius: 40px;
+		border: 0;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0.80em 2em;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.4em;
+		font-weight: 600;
+		min-width: 10em;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		.button:hover {
+			background-color: #7f682d;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		.button.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		.button.small {
+			font-size: 0.8em;
+		}
+
+/* Wrapper */
+
+	.wrapper.style1 {
+		background: #fff;
+	}
+
+	.wrapper.style2 {
+		background: #ececec;
+		padding: 6em 0;
+		text-align: center;
+	}
+
+	.wrapper.style3 {
+		padding: 2em 0 3.5em 0;
+		background: #ececec;
+	}
+
+		.wrapper.style3 span {
+			display: inline-block;
+			padding-top: 0.80em;
+			font-size: 2em;
+			font-weight: 600;
+		}
+
+		.wrapper.style3 .button {
+			float: right;
+		}
+
+	.wrapper.style4 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff; /* Fondo del wrapper */
+		padding: 6em 0;
+		text-align: center;
+	}
+
+	
+	.flex-layout {
+		display: flex;
+		align-items: center; /* Alinea verticalmente el contenido */
+		justify-content: space-between; /* Separa el texto y la imagen */
+		gap: 70px; /* Espaciado entre texto e imagen */
+		max-width: 1200px;
+		margin: 0 auto; /* Centra horizontalmente */
+		flex-wrap: wrap; /* Apila en pantallas pequeñas */
+	}
+	
+	/* Texto */
+	.content {
+		flex: 1; /* Ocupa un espacio proporcional al de la imagen */
+		text-align: justify;
+		padding: 20px;
+	}
+	
+	/* Imagen */
+	.image-container {
+		flex: 1; /* Ocupa el mismo espacio que el texto */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    	min-height: 100%; /* Asegura que el contenedor tenga altura */
+	}
+	
+	.image-container img {
+		width: 100%; /* La imagen ocupa el ancho del contenedor */
+		height: auto; /* Mantiene las proporciones de la imagen */
+		object-fit: contain; /* Asegura que toda la imagen se vea, sin recortes */
+	}
+
+	/* Estilo responsivo */
+	@media (max-width: 768px) {
+		.flex-layout {
+			flex-direction: column; /* Cambia a columna */
+			text-align: center;
+		}
+
+		.image-container img {
+			width: 100%; /* La imagen ocupa el ancho completo */
+			height: auto; /* Mantiene proporciones */
+		}
+	}
+
+
+/* Header */
+
+	#header {
+		/* background: #333333 url("../images/pic01.jpg") no-repeat; */
+		background-size: cover;
+		color: #fff;
+		padding: 6em 0;
+		text-align: center;
+		background-position: 0% 65%;
+		position: relative;
+	}
+
+		#header:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(16, 32, 48, 0.25);
+		}
+
+		#header > * {
+			position: relative;
+			z-index: 1;
+		}
+
+	.homepage #header {
+		padding: 5em 0;
+		background-position: center;
+	}
+
+	
+	#nav > ul {
+		margin: 0;
+	}
+
+		#nav > ul > li {
+			border-radius: 10px 10px 0 0;
+			display: inline-block;
+			margin-left: 0.5em;
+			padding: 0.5em 1.5em;
+		}
+
+			#nav > ul > li a {
+				color: #FFF;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 1.2em;
+			}
+
+			#nav > ul > li:first-child {
+				margin-left: 0;
+			}
+
+			#nav > ul > li:hover a {
+				color: #fff;
+			}
+
+			#nav > ul > li.active {
+				background: #aa8b3e;
+			}
+
+				#nav > ul > li.active a {
+					color: white;
+				}
+
+			#nav > ul > li > ul {
+				display: none;
+			}
+
+/* Dropotron */
+
+	.dropotron {
+		margin-top: -2px;
+		background: #aa8b3e;
+		border-radius: 10px;
+		color: white;
+		min-width: 12em;
+		padding: 1em 0;
+	}
+
+		.dropotron > li {
+			line-height: 2em;
+			padding: 0 1em;
+		}
+
+			.dropotron > li > a {
+				color: #FFF;
+				text-decoration: none;
+			}
+
+			.dropotron > li.active > a, .dropotron > li:hover > a {
+				color: #FFF;
+			}
+
+		.dropotron.level-0 {
+			border-radius: 0 10px 10px 10px;
+			font-size: 1em;
+		}
+
+/* Banner */
+
+	#banner {
+		text-align: center;
+		padding: 4em 0 0 0;
+	}
+
+		#banner .major h2 {
+			font-size: 3.5em;
+		}
+
+		#banner .major .byline {
+			display: block;
+			margin: 0em 2em;
+			line-height: 1.6em;
+			font-size: 1.5em;
+		}
+		
+		#banner a {
+			color: inherit;
+		}
+
+/* Logo */
+
+	#logo-container {
+		text-align: center; /* Centra el logo y el texto */
+		background: rgba(4, 5, 5, 0.65);
+		padding: 0 20px;
+		display: inline-block;
+		border-radius: 10px;
+	}
+
+	#logo-container img {
+		display: block; /* Hace que la imagen se coloque encima del texto */
+		margin: 0 auto; /* Centra la imagen */
+		width: 100px; /* Ajusta el tamaño del logo según necesites */
+		height: auto; /* Mantiene la proporción */
+	}
+
+	#logo {
+		font-family: "Charm";
+		font-size: 20px;
+	}
+
+	.footer-logo-container {
+		display: flex; /* Activa Flexbox */
+		align-items: center; /* Alinea verticalmente */
+		justify-content: center; /* Centra horizontalmente */
+		gap: 10px; /* Espacio entre el logo y el texto */
+	}
+	
+	.footer-logo {
+		width: 250px; /* Ajusta el tamaño del logo */
+		height: auto; /* Mantiene la proporción */
+	}
+
+	.logo_10cm {
+		background: rgba(39, 116, 150, 0.15);
+		padding: 0 60px;
+		display: inline-block;
+		border-radius: 10px;
+	}
+	
+
+/* Main */
+
+	.no-sidebar #main .major, .left-sidebar #main .major, .right-sidebar #main .major {
+		text-align: left;
+	}
+
+	.homepage #main .major {
+		text-align: center;
+	}
+
+	#main {
+		padding: 6em 0;
+	}
+
+		#main .sidebar .major {
+			padding-bottom: 2em;
+		}
+
+			#main .sidebar .major h2 {
+				font-size: 1.8em;
+			}
+
+		#main .sidebar .default li {
+			border-color: #cdcdcd;
+		}
+
+		#main .sidebar .default a {
+			color: #464646;
+		}
+
+		#main .sidebar > :first-child {
+			margin-bottom: 3em;
+		}
+
+/* Footer */
+
+	#footer {
+		padding: 4em 0;
+		color: #fff;
+	}
+
+		#footer .major h2 {
+			font-size: 2em;
+			color: #FFF;
+		}
+
+		#footer .major .byline {
+			font-size: 1.1em;
+		}
+
+		#footer .copyright {
+			margin-top: 0em;
+			padding-top: 0.5em;
+			border-top: 1px solid;
+			border-color: rgba(192, 192, 192, 0.15);
+			text-align: center;
+			color: inherit;
+		}
+
+		#footer a {
+			color: inherit;
+		}
